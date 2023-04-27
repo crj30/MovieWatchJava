@@ -15,6 +15,7 @@ import java.util.List;
 public class NoteAdapter extends ArrayAdapter<Note> {
 
     public NoteAdapter(Context context, List<Note> notes){
+
         super(context,0,notes);
     }
 

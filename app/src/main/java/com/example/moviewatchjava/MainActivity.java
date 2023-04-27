@@ -9,7 +9,7 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView noteListView;
+    private ListView movieListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void initWidgets() {
-        noteListView = findViewById(R.id.movieListView);
+        movieListView = findViewById(R.id.movieListView);
     }
 
     private void setNoteAdapter() {
         NoteAdapter noteAdapter = new NoteAdapter(getApplicationContext(), Note.noteArrayList);
-        noteListView.setAdapter(noteAdapter);
+        movieListView.setAdapter(noteAdapter);
     }
     public void newMovie(View view) {
         Intent newNoteIntent = new Intent(this, MovieDetailActivity.class);
