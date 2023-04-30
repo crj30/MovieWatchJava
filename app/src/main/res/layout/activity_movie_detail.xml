@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,38 +13,39 @@
         android:layout_height="wrap_content"
         android:minHeight="?actionBarSize"
         android:theme="?actionBarTheme"
-        android:background="@color/darkGray">
+        android:background="@color/red">
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Movie"
-            android:textSize="35sp"
-            android:textColor="@color/white"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:textStyle="bold"/>
+            android:text="DETAIL"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save"
+            android:text="SAVE"
             android:textSize="25sp"
-            android:textColor="@color/white"
-            android:layout_gravity="end"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/darkGray"
             android:textStyle="bold"
-            android:onClick="saveMovie"/>
+            android:layout_gravity="end"
+            android:onClick="saveNote"/>
 
     </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
         android:text="Title"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/darkGray"
-        android:layout_gravity="center"
         android:textStyle="bold"
-        android:layout_marginTop="20dp" />
+        android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/titleEditText"
@@ -51,21 +53,20 @@
         android:layout_height="wrap_content"
         android:textSize="25sp"
         android:layout_marginTop="20dp"
-        android:minLines="1"
+        android:maxLines="1"
         android:textColor="@color/darkGray"
-        android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:layout_gravity="center"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Details"
+        android:text="Genre/Release"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/darkGray"
-        android:layout_gravity="center"
         android:textStyle="bold"
-        android:layout_marginTop="20dp" />
+        android:layout_gravity="center"/>
 
     <EditText
         android:id="@+id/descriptionEditText"
@@ -75,7 +76,20 @@
         android:layout_marginTop="20dp"
         android:minLines="3"
         android:textColor="@color/darkGray"
+        android:layout_gravity="center"/>
+
+
+    <Button
+        android:id="@+id/deleteNoteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:textSize="25sp"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/red"
+        android:textStyle="bold"
         android:layout_gravity="center"
-        android:textStyle="bold" />
+        android:layout_marginTop="20dp"
+        android:onClick="deleteNote"/>
 
 </LinearLayout>
